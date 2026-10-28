@@ -40,7 +40,7 @@ I tested the program using the demonstration in main.cpp and additional individu
   First node: The head pointer moves to the second node. 
 
   Before:
-
+```
   head
    |
    v
@@ -48,55 +48,48 @@ I tested the program using the demonstration in main.cpp and additional individu
                    ^
                    |
                   tail
-
+```
   After deleting A:
-
+```
   head
-
    |
    v
-
-  [B] -> [C] -> nullpt
-  r
+  [B] -> [C] -> nullptr
           ^
           |
          tail
-
+```
   Deleting the last node: The previous node's next pointer becomes nullptr, and tail is updated to point to that previous node.
 
   Before:
-
+```
   head
    |
    v
-  
-  [A] -> [B] -> [C] -> nullpt
-r
+  [A] -> [B] -> [C] -> nullptr
                    ^
                    |
                   tail
-
+```
   After deleting C:
-
+```
   head
    |
-   v
-  
+   v 
   [A] -> [B] -> nullptr
-r
           ^
           |
         tail
-
+```
   Deleting the only node: Both head and tail become nullptr, because no nodes remain.
 
   Before:
-
+  ```
   head, tail
       |
       v
      [A] -> nullptr
-  
+  ```
   After:
   head = nullptr
   tail = nullptr
