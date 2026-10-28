@@ -52,9 +52,12 @@ I tested the program using the demonstration in main.cpp and additional individu
   After deleting A:
 
   head
+
    |
    v
-  [B] -> [C] -> nullptr
+
+  [B] -> [C] -> nullpt
+  r
           ^
           |
          tail
@@ -66,7 +69,9 @@ I tested the program using the demonstration in main.cpp and additional individu
   head
    |
    v
-  [A] -> [B] -> [C] -> nullptr
+  
+  [A] -> [B] -> [C] -> nullpt
+r
                    ^
                    |
                   tail
@@ -76,7 +81,9 @@ I tested the program using the demonstration in main.cpp and additional individu
   head
    |
    v
+  
   [A] -> [B] -> nullptr
+r
           ^
           |
         tail
