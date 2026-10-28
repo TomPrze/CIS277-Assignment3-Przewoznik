@@ -45,9 +45,9 @@ I tested the program using the demonstration in main.cpp and additional individu
    |
    v
   [A] -> [B] -> [C] -> nullptr
-                   ^
-                   |
-                  tail
+                  ^
+                  |
+                tail
 ```
   After deleting A:
 ```
@@ -67,9 +67,9 @@ I tested the program using the demonstration in main.cpp and additional individu
    |
    v
   [A] -> [B] -> [C] -> nullptr
-                   ^
-                   |
-                  tail
+                 ^
+                 |
+                tail
 ```
   After deleting C:
 ```
