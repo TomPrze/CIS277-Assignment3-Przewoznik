@@ -39,54 +39,96 @@ I tested the program using the demonstration in main.cpp and additional individu
 1.
   First node: The head pointer moves to the second node. 
   Before:
+
   head
+
    |
+
    v
+
   [A] -> [B] -> [C] -> nullptr
+
                    ^
+
                    |
+
                   tail
+
   After deleting A:
+
   head
+
    |
+
    v
+
   [B] -> [C] -> nullptr
+
           ^
+
           |
+
          tail
-  
+
+
   Deleting the last node: The previous node's next pointer becomes nullptr, and tail is updated to point to that previous node.
+
   Before:
+
   head
+
    |
+
    v
+
   [A] -> [B] -> [C] -> nullptr
+
                    ^
+
                    |
+
                   tail
+
   After deleting C:
+
   head
+
    |
+
    v
+
   [A] -> [B] -> nullptr
+
           ^
+
           |
+
          tail
-  
+
+
   Deleting the only node: Both head and tail become nullptr, because no nodes remain.
+
   Before:
+
   head, tail
+
       |
+
       v
+
      [A] -> nullptr
+
   After:
+
   head = nullptr
+
   tail = nullptr
 
-2. Read does not delete or alter anything, while deleting removes the node it's affecting and releases its memory.
-3. It measures the sum of the lengths of all stored message texts. It excludes sender strings, TextMessage objects, Node objects, the messages() vector, and pointer fields.
-4. In the worst case, receive might have to examine all existing nodes n, making it have O(n) time. Meanwhile, appending is only O(1) because the tail is already known, meaning it doesn't have to go through potentially the whole list.
-5. If they remain allocated, the memory will leak. Since there's no longer anything pointing to those nodes, they can no longer be deallocated. If two inbox objects share the same ownership, then both may try to delete the same nodes, causing memory corruption. 
+
+3. Read does not delete or alter anything, while deleting removes the node it's affecting and releases its memory.
+4. It measures the sum of the lengths of all stored message texts. It excludes sender strings, TextMessage objects, Node objects, the messages() vector, and pointer fields.
+5. In the worst case, receive might have to examine all existing nodes n, making it have O(n) time. Meanwhile, appending is only O(1) because the tail is already known, meaning it doesn't have to go through potentially the whole list.
+6. If they remain allocated, the memory will leak. Since there's no longer anything pointing to those nodes, they can no longer be deallocated. If two inbox objects share the same ownership, then both may try to delete the same nodes, causing memory corruption. 
 
 ## AI Use
 ChatGPT was used for bug finding and fixing along with additional testing and formatting the table for said testing's results.
